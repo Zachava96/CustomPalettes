@@ -2,11 +2,13 @@
 
 This mod for UNBEATABLE allows you to add custom arcade mode palettes.
 
+Please note that this mod is unofficial and not endorsed by D-CELL GAMES in any way.
+
 ![Image showing UNBEATABLE's Arcade Mode menu with a custom palette](CustomPalettes.jpg)
 
 ## Compatible game versions
 
-- UNBEATABLE (tested with `v1.6.1`)
+- UNBEATABLE (tested with `v1.7.3`)
 
 ## Requirements
 
