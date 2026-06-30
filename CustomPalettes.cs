@@ -16,7 +16,7 @@ namespace CustomPalettes
     {
         public const string PLUGIN_GUID = "net.zachava.custompalettes";
         public const string PLUGIN_NAME = "Custom Palettes";
-        public const string PLUGIN_VERSION = "1.0.0";
+        public const string PLUGIN_VERSION = "1.1.0";
         internal static new ManualLogSource Logger;
         public static List<MenuPaletteIndex.Palette> customPalettes = new List<MenuPaletteIndex.Palette>();
 
@@ -39,8 +39,9 @@ namespace CustomPalettes
                         MenuPaletteIndex.Palette menuPalette = new MenuPaletteIndex.Palette
                         {
                             name = customPalette.name,
-                            palette = new Arcade.UI.UIColorPalette{colors = customPalette.colors.Select(c => c.ToColor()).ToArray()}
+                            palette = ScriptableObject.CreateInstance<Arcade.UI.UIColorPalette>()
                         };
+                        menuPalette.palette.colors = customPalette.colors.Select(c => c.ToColor()).ToArray();
                         customPalettes.Add(menuPalette);
                         Logger.LogInfo($"Loaded custom palette {customPalette.name} from {jsonFile}");
                     }
